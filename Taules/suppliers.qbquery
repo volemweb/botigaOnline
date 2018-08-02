@@ -1,0 +1,13 @@
+﻿CREATE TABLE Suppliers(
+	Id int NOT NULL,
+	Name varchar(30) NULL,
+	Email varchar(255) NULL,
+	Web varchar(50) NULL,
+	Active int NULL,
+  PRIMARY KEY(`Id`)
+ )
+ENGINE = InnoDB
+CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+insert into Suppliers values (2,'Botiga',,,1)
+insert into companys values(1,'Loreal',1,1)

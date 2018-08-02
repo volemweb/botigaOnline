@@ -1,0 +1,72 @@
+﻿
+
+insert into suppliers (id,name,email,active) values (1,'Proveedor1','Proveedor1@gmail.com',1);
+insert into suppliers (id,name,email,active) values (2,'Proveedor2','Proveedor2@gmail.com',1);
+
+insert into companys (IdNumber,Name,Active,DefaultSupplier) values (1,'Loreal',1,1);
+insert into companys (IdNumber,Name,Active,DefaultSupplier) values (2,'Kérastase',1,1);
+insert into companys (IdNumber,Name,Active) values (3,'Revlon',1);
+insert into companys (IdNumber,Name,Active) values (4,'Llongueras',1);
+
+insert into line (IdNumber,Name,Active,CompanyId) values (100001,'Cabello',1,1);
+insert into line (IdNumber,Name,Active,CompanyId) values (100002,'Corporal',1,1);
+insert into line (IdNumber,Name,Active,CompanyId) values (100003,'Peluquería',1,2);
+insert into line (IdNumber,Name,Active,CompanyId) values (100004,'Generica',1,3);
+insert into line (IdNumber,Name,Active,CompanyId) values (100005,'Cabello',1,4);
+
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active,Description)
+values (10000001,'Accord Parfait Strobing+Hiughlight+Iluminador_fluid',9.45,1,100001,1,'Pack complet Accord Parfait');
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000002,'Aceite extraordinario elvive',12.45,1,100001,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active,Description)
+values (10000003,'Look Completo',6,1,100002,1,'Pintalabios, Color infaillible y Resist & Shine');
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000004,'Loreal Absolut repair-lipidium shampoo 500ml+mascara-500ml',12.95,1,100001,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000005,'Loreal diamantissime',7,1,100002,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000006,'LOreal Revitalift Miracle Blur',2,1,100001,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000007,'Protector solar cabello',11.45,1,100001,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000008,'Solar soblime',9.45,1,100002,1);
+
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000009,'Crema cabello',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000010,'Cristalliste',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000011,'Densifique',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000012,'Discipline',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000013,'Nutritive Irisome',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000014,'Pack therapiste',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000015,'Reflection',9.45,2,100003,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000016,'Resistance',9.45,2,100003,1);
+
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000017,'All in one 150ml',12,3,100004,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000018,'Gentle mèches system',6.45,3,100004,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000019,'Oro Fluido',12.45,3,100004,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000020,'Revlon ColorStay+ PhotoReady',6,3,100004,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000021,'Revlon nurti color creme',3,3,100004,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000022,'Revlon ultra hd',7,3,100004,1);
+
+
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000023,'Campú + Mascarilla Cromatics',2,4,100005,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000024,'Champú + Mascarilla Nutrissence',9.45,4,100005,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000025,'Crema Alisadora',9.45,4,100005,1);
+insert into products (IdNumber,Name,SellPrice,CompanyId,LineId,Active)
+values (10000026,'Tinte capilar advance caoba',5.95,4,100005,1);

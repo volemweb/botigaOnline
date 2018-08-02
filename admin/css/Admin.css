@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-ene-2017, 0:01:42
+    Author     : Salvador
+*/
+
+/*PAGINA PANELL DE CONTROL*/
+#infoEmpresa
+{
+    width:300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+   /*padding:top right bottom left*/
+    padding: 10px 0px 10px 20px;
+    border: 2px solid;
+}
+
+#infoEmpresa ul
+{
+   list-style-type: none;
+}
+
+#infoEmpresa ul .titol
+{
+   font-size: 16px;
+   font-weight: bolder;
+}
+
+#contingutPagina
+{
+   width:80%;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+#contingutPagina .titol
+{
+    text-align: center;  
+}

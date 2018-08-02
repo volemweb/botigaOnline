@@ -1,0 +1,921 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-ago-2015, 16:29:53
+    Author     : Salvador
+*/
+
+/*Aquest tipo de font la fem servir per l'icona del menú per la versió mobil' */
+
+@font-face
+{
+   font-family: MontereyFLF;
+   src: url('../fonts/MontereyFLF.ttf') format('truetype'),url('../fonts/MontereyFLF.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: geomanist;
+   src: url('../fonts/geomanist.ttf') format('truetype'),url('../fonts/geomanist.eot?#iefix') format('embedded-opentype');
+  
+}
+@font-face
+{
+   font-family: Infinity;
+   src: url('../fonts/Infinity.ttf') format('truetype'),url('../fonts/Infinity.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: New_Cicle_Fina;
+   src: url('../fonts/New_Cicle_Fina.ttf') format('truetype'),url('../fonts/New_Cicle_Fina.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: Life;
+   src: url('../fonts/Life.ttf') format('truetype'),url('../fonts/Life.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: ANGOSTUR;
+   src: url('../fonts/ANGOSTUR.TTF') format('truetype'),url('../fonts/ANGOSTUR.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: Raleway;
+   src: url('../fonts/Raleway-Thin.ttf') format('truetype'),url('../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: Raleway2;
+   src: url('../fonts/Raleway-Thin2.ttf') format('truetype'),url('../fonts/Raleway-Thin2.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: bellgothic;
+   src: url('../fonts/bellgothic-webfont.ttf') format('truetype'),url('../fonts/bellgothic-webfont.eot?#iefix') format('embedded-opentype');
+  
+}
+
+@font-face
+{
+   font-family: espresso;
+   src: url('../fonts/ESPRESSO.ttf') format('truetype'),url('../fonts/ESPRESSO.eot?#iefix') format('embedded-opentype');
+  
+}
+/*
+body{
+  background-color:#99FFB3;
+  background-image: -moz-linear-gradient(top,#FFFFFF , #99FFB3);
+  background-image: -webkit-gradient(linear, left top,left bottom, from(#FFFFFF), to(#99FFB3));
+  background-image: -ms-gradient(linear, left top,left bottom, from(#FFFFFF), to(#99FFB3));
+  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #99FFB3 100%);
+  background-image: linear-gradient(top, #FFFFFF, #99FFB3);
+  height: 100%;}*/
+#palla
+{
+    height: 0px;
+}
+
+/*LINKS */
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a img  {border:0;}
+a:hover{ color: red;}
+a:link{ }
+a:visited{ }
+a:active { }
+
+.opc1 li a:hover,.opc2 li a:hover {color:red;}
+.blau
+{
+    color:blue;
+}
+
+/*PAGINA ENTRAR_BOTIGA*/
+
+#validarusuaris
+{
+    width:300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+   /*padding:top right bottom left*/
+    padding: 10px 0px 10px 20px;
+    border: 2px solid;
+}
+.missatge
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: geomanist;
+    color:red;
+}
+
+#btnEntrar
+{
+   text-decoration: none;
+    padding: 3px;
+    //font-weight: 600;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+  }
+ #btnEntrar:hover{
+    color: white;
+    background-color: blue;
+  }
+  
+/*CONTROL_SESSIO.PHP*/
+
+#controlSessio
+{
+    margin-top: 1px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.usuari
+{
+    float:right;
+    display: inline;
+}
+
+.carro
+{
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/*PAGINA_BOTIGA APARTAT SERCADORS*/
+
+.estil
+{
+   /*posarem els colors de fons amb un degredat menys els explorados mes basics
+    background: #4D7AFF; /*per els expolrados mes basics  
+    background: -moz-linear-gradient(top,#008C69,#FFFFFF); les dos seguents lineas es fara un degredat per els exploradors que firefox , chrome i iexplorer  respectivament
+    background: -webkit-linear-gradient(#008C69,#FFFFFF);
+    background: -ms-linear-gradient(top, #008C69 0%, #FFFFFF 100%);*/
+    
+   /*Polirem el disseny millorant els bordes fent los mes groixuts i amb sombres*/
+    
+    border:1px solid #000000;
+    
+    box-shadow: 2px 2px 5px #000000;
+    -moz-box-shadow:2px 2px 5px #000000;
+    -webkit-border-shodow:2px 2px 5px #000000;
+   
+}
+#company,#linea
+{
+    height: 23px;
+    font-family: geomanist;
+    font-size: 16px;
+}
+
+#sercador
+{
+    padding-top: 20px;
+}
+#selects
+{
+   //-moz-border-radius:8px;
+   // -webkit-border-radius:8px;
+   //border-radius:8px;
+    font-family: geomanist;
+    font-size: 18px;
+}
+
+#ajuda
+{
+    margin-top: 6px;
+    font-size: 13px;
+    font-style: oblique;
+    margin-bottom: 10px;
+    position: absolute;
+    background-color: white;
+    border: solid 1px;
+    display: none;
+    margin-left: 50px;
+}
+
+#buscar
+{
+    float:right;
+    margin-top: 0px;
+    display: block;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 20px;
+   // -moz-border-radius:8px;
+   // -webkit-border-radius:8px;
+   // border-radius:8px;
+    font-family: geomanist; 
+}
+.bsc
+{
+    font-size: 16px;
+}
+
+#btnBuscar,#btnCompanyia,#btnLineas
+{
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+     border-radius:6px;
+     font-family: geomanist;
+     font-size: 16Px;
+     color: #ffffff;
+     background-color: #008C69;
+     
+    
+}
+
+#paraulaClau
+{
+     font-family: geomanist;
+     font-style:oblique;
+     margin-left:5%;
+}
+
+/*ESTIL BOTIGA*/
+
+.cap_producte
+{
+  border: solid 1px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #000000;
+  -moz-box-shadow:2px 2px 5px #000000;
+  -webkit-border-shodow:2px 2px 5px #000000;
+  
+  color:white;
+  background-color:#333333;
+}
+
+a
+{ text-decoration: none;
+  color: black;
+}
+
+#totalProductes
+{
+    padding-bottom: 20px;
+    margin-left: 5%;
+    font-family: geomanist;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#foto
+{
+    width: 180px;
+    height: 150px;
+    box-shadow: 2px 2px 5px #000000;
+   -moz-box-shadow:2px 2px 5px #000000;
+   -webkit-border-shodow:2px 2px 5px #000000;
+}
+
+#caixaProductes
+{
+    font-family:Raleway;
+    font-size: 19px;  
+}
+.descompte
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.preuFinal
+{
+    color: red;
+    font-size: 27px;
+}
+.desc 
+{
+    font-size: 14px;
+}
+.boto_afegir 
+{
+    text-decoration: none;
+    padding: 3px;
+    color: #ffffff;
+    background-color: #008C69;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-size: 16px;
+    margin-left: 20px;
+    text-align: center;
+    display: block;
+    width: 115px;
+}
+.boto_afegir:hover 
+{
+    color: black;
+    background-color: #ffffff;
+}
+.enStock
+{
+    font-size: 14px;
+    text-align: right;
+}
+.enStock spam
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+/*PAGINA REGISTRE.PHP*/
+
+#registre
+{
+    width:50%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+   /*padding:top right bottom left*/
+   /* padding: 10px 0px 10px 20px;*/
+}
+
+#registre input
+{
+    font-size: 18px;
+}
+.nomForm
+{
+    font-size: 18px;
+}
+.titol_registre
+{
+    font-size: 22px;
+}
+#btnRegistre
+{
+   text-decoration: none;
+    padding: 3px;
+   //font-weight: 600;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 18px;
+    margin-left: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+ #btnRegistre:hover{
+    color: white;
+    background-color: blue;
+  }
+
+/*ESTIL DE PAGINACIÓ */
+
+.paginacio {
+    margin-top: 10px;
+    margin-left: 5%;
+    
+}
+.paginacioNum{
+     
+     text-align: center;
+     padding-left: 4px;
+     padding-right: 4px;
+     font-size: 12px;
+     border: solid 1px;
+     font-family: geomanist;
+    
+}
+.paginacioLletres{
+  
+    text-align: center;
+    padding: 2px;
+    font-size: 14px;
+    font-family: geomanist;
+    
+}
+
+.paginacioNum > a,.paginacioLletres > a
+{
+   text-decoration: none;
+   color: black;
+   
+}
+#numPag
+{
+    font-size: 12px;
+    float: right;
+    font-family: geomanist;
+     margin-right: 8%;
+}
+
+/*PAGINA INDEX*/
+
+.titolIndex
+{
+    color:green;
+    font-family: Life;
+    font-size: 45px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#contingut
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: geomanist;
+}
+
+#accesRapid
+{
+    font-family: geomanist;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 40px;
+   
+}
+#accesRapid a
+{
+    width: 340px;
+    height: 50px;
+    display: inline-block;
+    border: solid 2px;
+    padding: 5px 5px 5px 5px;
+    font-size: 32px;
+    box-shadow:8px 8px 8px #000000;
+   -moz-box-shadow:8px 8px 8px #000000;
+   -webkit-border-shodow:8px 8px 8px #000000;
+}
+
+
+#llista
+{
+    margin-top: 40px;
+}
+.titolEsquerra
+{
+   
+    margin-top:25px;
+    margin-left: 5%;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+      
+}
+
+#esquerra
+{ 
+    width: 40%;
+   // margin-top:20px;
+    display: inline-block; /*Haig d'indiacar-ho a les dues caixes perque tinguin aquest comportament*/
+    font-family:Raleway;
+    margin-left: 6%;
+    font-size: 14px;
+}
+
+#dreta
+{
+    width: 40%;
+   // margin-top: 10px;
+    display:inline-block; /*Aixo en parmet que aquesta caixa sigui un block i estigui en linea amb l'altre*/
+   // vertical-align: top; /*Aixo es el 'valig:top' em permet posar la caixa que fagi tope a dalt */
+   // text-align: justify;
+   // margin-right: 40px;
+    margin-left: 6%;
+    font-family:Raleway;
+    font-size: 14px; 
+}
+
+#esquerraIndex
+{ 
+    width: 40%;
+    vertical-align: top;
+    margin-bottom:20px;
+    display: inline-block; /*Haig d'indiacar-ho a les dues caixes perque tinguin aquest comportament*/
+    font-family:Raleway;
+    margin-left: 6%;
+    font-size: 22px;
+   // margin-top: 10px;
+    
+}
+.bxslider img
+{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    position: relative;
+} 
+#imatges
+{
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#dretaIndex
+{
+   width: 40%;
+   margin-top: 100px;
+   display:inline-block; /*Aixo en parmet que aquesta caixa sigui un block i estigui en linea amb l'altre*/
+   vertical-align: top; /*Aixo es el 'valig:top' em permet posar la caixa que fagi tope a dalt */
+   text-align: justify;
+   margin-right: 40px;
+   margin-bottom:20px;
+   margin-left: 6%;
+}
+
+.links
+{
+    font-size: 20px;
+    padding-left: 50px;
+}
+.links a {padding-right:  20px;}
+
+/*AFEGIR PRODUCTE*/
+
+#formulari
+{
+    margin-top: 5%;
+    margin-left:12%;
+    font-size: 21px;
+    font-family: geomanist;
+}
+
+#correcta
+{
+    width: 60%;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 28px;
+    color: red;
+    text-align: center;
+    font-family: geomanist;
+}
+
+/*ESTIL CARRO COMPRA */
+
+#carro td{padding-left: 10px;}
+.capCompra{font-weight: bold; }
+.titolCompra{font-size: 25px;}
+.total{ font-size: 20px;}
+
+/*ESTIL PAGINA USUARI*/
+#Usuari
+{
+    border: solid 1px;
+    padding:10px 10px 10px 10px;
+    box-shadow: 2px 2px 5px #000000;
+   -moz-box-shadow:2px 2px 5px #000000;
+   -webkit-border-shodow:2px 2px 5px #000000;
+   width: 50%;
+}
+#Usuari boto_afegir {float:left;}
+#menuUsuari spam
+{
+    padding-left: 10px;
+    font-weight: bold;
+}
+.titol{font-size: 20px;font-weight: bold;}
+
+.camp{font-weight: bold;}
+
+#modUsuari
+{
+    padding:10px 10px 10px 10px;
+}
+
+/*FORMAT LLISTAT DE COMANDES DELS USUARIS*/
+
+#Comandes
+{
+    width: 80%;
+    border:solid 1px;
+    border-collapse: collapse; //aquesta propietat fa que el tr border funcioni
+}
+#Comandes tr{ border : solid 1px;}
+#Comandes td { text-align: center;}
+#Comandes .cap td {border : solid 1px;font-weight: bold}
+#Comandes .estat { color :green}
+#Comandes .totals { font-weight: bold}
+
+.boto_veure 
+{
+    text-decoration: none;
+    padding: 3px;
+    color: #ffffff;
+    background-color: #008C69;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-size: 16px;
+    margin-left: 20px;
+    text-align: center;
+    display: block;
+    width: 50px;
+}
+.boto_veure:hover 
+{
+    color: black;
+    background-color: #ffffff;
+}
+
+
+
+/*PEU PAGINA*/
+
+#peupagina
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: none;
+    border-left: none;
+    margin-top: 50px;
+    border:solid 2px;
+    height: 140px;
+    font-weight: bolder;
+    background-color: black;
+}
+
+#peupagina a {color:white;}
+#peupagina a:hover {color:green;}
+.linksPeu1
+{
+    display: inline-block;
+    vertical-align: top;
+}
+.linksPeu2 
+{
+    display: inline-block;
+    vertical-align: top;
+}
+#peupagina ul{ list-style: none;}
+#peupagina ul > li{
+        font-family: Arial;
+        font-size: 16px;
+        padding-bottom: 5px;
+}
+#peupagina .facebook
+{
+    float: right;
+    font-family: New_Cicle_Fina;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+    color:white;
+}
+
+@media screen and (max-width:940px )
+{
+  .titolIndex
+  {
+         font-size: 38px;
+  }
+}
+
+@media screen and (max-width:816px )
+{
+    
+  
+    
+  #esquerra,#dreta,#esquerraIndex,#dretaIndex
+  {
+      width: 88%;
+      font-size: 16px;
+      margin-top: 20px;
+  }
+ 
+  #esquerra
+  {
+      margin-top: 10px;
+  }
+  
+  #accesRapid
+   {
+    margin-top: 0px;
+    }
+  #Usuari
+  {
+      width: 80%
+  }
+}
+
+@media screen and (max-width:800px)
+{
+ 
+.links
+{
+    font-size: 16px;
+    padding-left: 0px;
+}
+.links a {padding-right:  5px;}
+  
+    
+  
+}
+
+@media only screen and (min-width:800px) and (max-width:880px ){}
+
+@media only screen and (max-width:660px)
+{
+    
+   .titolIndex
+   {
+         font-size: 35px;
+   }
+   
+   #selects,#buscar 
+   {
+       margin-right: auto;
+       margin-left: auto;
+   }
+   
+   #buscar 
+   {
+       float: none;
+       width: 280px;
+   }
+   
+    #registre
+     {
+      width:70%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      /*padding:top right bottom left*/
+      /* padding: 10px 0px 10px 20px;*/
+     }
+     
+     #inputReg
+     { 
+         width:100%
+     }
+    .nomForm
+    {
+       display: none;
+    }
+    #correcta {font-size: 28px;}
+    
+    #accesRapid a
+    {
+    width: 300px;
+    font-size: 28px;
+    }
+}
+@media screen and (max-width:495px )
+{ 
+    #peupagina
+    {
+        height: 160px;
+    }
+    .boto_afegir 
+    { 
+      font-size: 12px;
+     margin-left: 5px;         
+    }
+    #Comandes
+    {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:410px )
+{
+    
+   .titolIndex
+    {
+        margin-left: 1%;
+        font-size: 30px;
+    }
+   #peupagina{height: 0%;}
+   #peupagina ul > li{
+        font-family: New_Cicle_Fina;
+        font-size: 16px;
+   }
+   
+   #peupagina .nomWeb
+   {
+    float:none;
+    font-family: New_Cicle_Fina;
+    font-size: 20px;
+    margin-top: 200pX;
+   }
+   
+    #validarusuaris
+    {
+      width:90%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+     /*padding:top right bottom left*/
+      padding: 5px 0px 0px 5px;
+     }
+     
+     #registre
+     {
+      width:90%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      /*padding:top right bottom left*/
+      /* padding: 10px 0px 10px 20px;*/
+     }
+
+    .nomForm { display: none;}
+   
+    #correcta {font-size: 24px;margin-top: 20px;}
+    
+    #accesRapid a
+    {
+    width: 220px;
+    height: 30px;
+    font-size: 20px;
+    }
+}
+
+@media screen and (max-width:390px )
+{
+    .links
+    {
+       font-size: 22px;
+       padding-left: 0px;
+    }
+    .links a {padding-right:  5px;}
+    
+    #esquerra,#dreta
+    {
+      width: 100%;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-left: 0px;
+      border-left: none;
+      border-right: none;
+  }
+  
+  #caixaProductes
+   {
+    font-family:Raleway;
+    border-left: none;
+    border-right: none;
+  }
+  
+  #contingut{width: 100%; }
+    
+  .nomForm { display: none; }
+    
+  #registre
+  {
+  /*padding:top right bottom left*/
+   padding: 0px 0px 0px 0px;
+  }
+    
+  #formulari .boto_afegir {font-size: 12px;}
+  #correcta {font-size: 20px;
+ }
+    
+@media screen and (max-width:340px )
+{
+  #formulari .boto_afegir {font-size: 12px; }
+  #formulari{font-size: 14px;}
+  #correcta {font-size: 16px;}
+ }
+    
+    
+    
+    
+    
+}
+
+
+    

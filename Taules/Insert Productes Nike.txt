@@ -1,0 +1,43 @@
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 217',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 345',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 482',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 738',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 759',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 837',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 839',20,2,3,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Nike modelo 985',20,2,3,10,1);
+
+-----------------------------------
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 335',20,2,4,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 368',20,2,4,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 520',20,2,4,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 893',20,2,4,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 923',20,2,4,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Nike modelo 976',20,2,4,10,1);

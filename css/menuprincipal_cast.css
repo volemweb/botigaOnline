@@ -1,0 +1,235 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-ago-2015, 17:14:28
+    Author     : Salvador
+*/
+
+/*Aquest tipo de font la fem servir per l'icona del menú per la versió mobil' */
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-h1hc10');
+	src:url('../fonts/icomoon.eot?#iefix-h1hc10') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-h1hc10') format('woff'),
+		url('../fonts/icomoon.ttf?-h1hc10') format('truetype'),
+		url('../fonts/icomoon.svg?-h1hc10#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"],/*Selecciona totes les etiquetes que la clase començi per el texte "icon-"*/
+[class*=" icon-"]/*Selecciona totes les etiquetes que la clase contingui el texte "icon-"*/
+{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+	content: "\e9bd";
+}
+
+.btn_menu
+  {
+      display: none;
+  }
+
+#capçaLogo
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    //background-image: url("../imatges/fonsgris.jpg");
+    margin-bottom: 5px;
+}
+
+#capçaLogo .capImg
+{
+  float:right;
+  margin-right:80px;
+  margin-top: 50px;
+  width: 280px;
+  height: 100px;
+}
+ 
+ .texte_cap
+ {
+     
+     display: inline-block;
+     font-family: Raleway;
+     float:right;
+     margin-top: 80px;
+     font-size: 18px;
+    
+ }
+ 
+ #data
+{
+   float: right;
+   margin-right: 45px;
+   
+}
+
+#menuprincipal
+{
+    border:2px solid;
+    border-right: none;
+    border-left: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: MontereyFLF;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+#menuprincipal ul{list-style: none;height: 20px;}
+#menuprincipal ul > li{float: left;padding-right: 18px;font-size: 50px;}
+
+#submenu
+{
+    border:solid 2px;
+    border-right: none;
+    border-left: none;
+    margin-top: 1px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    font-family: Raleway;
+}
+
+#submenu ul{ list-style: none;height: 20px;padding-left: 15px;margin-left: 40px;font-size: 25px;}
+
+#submenu ul li{ float:left;padding-right:10px;}
+
+#submenu .opc1,.opc2,.opc3,.opc4 { display: none}
+
+.tancar
+{
+    float:right;
+}
+
+.fixed {
+    position:fixed;
+    top:0;
+    right: 0px;
+    left: 0;
+    background-color: white;  
+}
+
+.fixedSubmenu {
+    position:fixed;
+    top:55px;
+    right: 0px;
+    left: 0;
+    background-color: white;  
+}
+
+
+@media screen and (max-width:680px)
+{
+    #capçaLogo .logo
+    {
+       width: 90%;
+       margin-left: auto;
+       margin-right: auto;
+        
+    }
+    
+    #capçaLogo .capImg
+    {
+      display:none;
+    }
+    
+    .texte_cap /*Aixo fa que desaperixi la imatge a menys resolució*/
+    {
+      display: none;
+    }
+    
+    .btn_menu
+    {
+        display:block;
+        padding-top: 4px;
+        padding-left: 10px;
+        font-size: 30px;
+    }
+    
+    #menuprincipal
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+   #menuprincipal ul
+   {
+     list-style: none;
+     display:none;
+     height: 100px;
+     padding:0px;/*Amb aixo elimino el marge de l'esquerra on hi haurien les rodeontes*/
+     margin-bottom: 30px;
+   }
+   
+   #menuprincipal ul > li{float: none;padding-left: 15px;font-size: 40px;}//aqui hi han les opciones principals del menu
+   
+   #submenu ul
+   {
+      padding:0px;/*Amb aixo elimino el marge de l'esquerra on hi haurien les rodeontes*/
+      font-size: 30px;
+      margin-top: 1px;
+      margin-bottom: 10px;
+      height: 0%;/*Ha d'estar aixi perque funcioni'*/
+      margin-left: 0px;
+      padding-bottom: 20px;
+   }
+   
+   #submenu ul{ list-style: none;height: 40px;padding-left: 1px;margin-left: 10px;font-size: 25px;}
+   
+   .fixedSubmenu {
+   
+    top:180px;
+ 
+   }
+   
+}
+
+@media screen and (max-width:860px)
+{
+    #capçaLogo .capImg
+    {
+     display:none;
+    }
+    
+    .texte_cap /*Aixo fa que desaperixi la imatge a menys resolució*/
+    {
+      display:none;
+    }
+}
+
+
+
+@media screen and (max-width:1000px)
+{
+    #capçaLogo .capImg
+    {
+     display:none;
+    }
+    
+    .texte_cap /*Aixo fa que desaperixi la imatge a menys resolució*/
+    {
+      margin-top: 100px;
+      font-size: 14px;
+    }
+}
+

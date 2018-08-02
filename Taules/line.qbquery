@@ -1,0 +1,15 @@
+﻿CREATE TABLE line(
+  IdNumber int NOT NULL,
+	Name varchar(30) NULL,
+	Active int NULL,
+ 	CompanyId int NULL,
+  PRIMARY KEY(`IdNumber`),
+  CONSTRAINT `line` FOREIGN KEY `line` (`CompanyId`)
+    REFERENCES `companys` (`IdNumber`)
+    ON DELETE CASCADE
+    ON UPDATE RESTRICT
+)
+ENGINE = InnoDB
+CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+insert into line (1,'Linea1',1,1)

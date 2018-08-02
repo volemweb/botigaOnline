@@ -1,0 +1,11 @@
+﻿CREATE TABLE companys(
+	IdNumber int NOT NULL,
+	Name varchar (50) NULL,
+	Active int NULL,
+  DefaultSupplier int NULL,
+  PRIMARY KEY(`IdNumber`)
+)
+ENGINE = InnoDB
+CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+insert into companys values(1,'Loreal',1,1)

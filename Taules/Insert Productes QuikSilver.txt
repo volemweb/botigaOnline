@@ -1,0 +1,59 @@
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 073',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 518',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 620 ',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 794',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 893',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 896',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quicksilver modelo 923',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quiksilver Free Wheelin Blancoazul',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quiksilver modelo 367',20,1,1,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta Quiksilver Mug Shot',20,1,1,10,1);
+
+-----------------------------------
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 356',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 394',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 492',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 835',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 836',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 878',20,1,2,10,1);
+
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Gorra Quicksilver modelo 8934',20,1,2,10,1);
+

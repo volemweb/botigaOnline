@@ -1,0 +1,24 @@
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas adiz verde',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas autheno',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas crew',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas modelo 342',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas modelo 784',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas modelo 784',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas modelo 943',20,3,5,10,1);
+
+insert into products (Name,SellPrice,CompanyId,LineId,Current,Active)
+values ('Camiseta adidas modelo adizero',20,3,5,10,1);
+

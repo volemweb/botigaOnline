@@ -1,0 +1,4 @@
+Configuracións:
+
+Els noms de les fotos han de ser sense accents.
+Si el nom de producte te un signe + el nom d'arxiu de la foto ha de ser un espai en blanc.

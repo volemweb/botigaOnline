@@ -1,0 +1,25 @@
+﻿CREATE TABLE products(
+	IdNumber int NOT NULL,
+	Name varchar(100) NULL,
+	SellPrice float NULL,
+        Discount int NULL,
+	CompanyId int NULL,
+	LineId int NULL,
+        Current int NULL,
+	Active int NULL,
+	Description varchar(255) NULL,
+  PRIMARY KEY(`IdNumber`)
+)
+ENGINE = InnoDB
+CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+ALTER TABLE `products` ADD CONSTRAINT `FK_products_companys` FOREIGN KEY `FK_products_companys` (`CompanyId`)
+    REFERENCES `companys` (`IdNumber`)
+    ON UPDATE RESTRICT;
+
+ALTER TABLE `products` ADD CONSTRAINT `FK_products_line` FOREIGN KEY `FK_products_line` (`LineId`)
+    REFERENCES `line` (`IdNumber`)
+    ON UPDATE RESTRICT;
+
+ALTER TABLE `products` MODIFY COLUMN `IdNumber` INTEGER NOT NULL DEFAULT 0,
+ ADD COLUMN `Current` INT NOT NULL DEFAULT 0 AFTER `LineId`;

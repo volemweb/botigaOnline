@@ -1,0 +1,236 @@
+@font-face
+{
+   font-family: Raleway;
+   src: url('../fonts/Raleway-Thin.ttf') format('truetype'),url('../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype');
+  
+}
+/* Inici- OPCIO 1 de Capçalera
+ On he creat una capça per tindre el logo  i la imatge ben centrat
+ a l'hora de cambiar la resolució*/
+#capçaLogo
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.logo
+ {
+   width: 40%;
+   text-align: left;
+   margin-top: 20px;
+ }
+ .texte_cap
+ {
+     
+     display: inline-block;
+     font-family: Raleway;
+     float:right;
+     margin-top: 5%;
+     padding-right: 5%;
+     font-size: 18px;
+    
+ }
+ /*Fi - OPCIO 1 de Capçalera*/
+ 
+ /* Inici- OPCIO 2 de Capçalera
+ Haig de posar aixo perque quedi centrada la capçalera a maxima
+ resolució*/
+ #capçaLogo2 
+ {
+   text-align: center;
+   margin-bottom: 100px;
+ }
+  /*Fi- OPCIO 2 de Capçalera */
+#menu
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    font-size: 21px;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    z-index: 1; /*indico que estigui en primer plano per sobre bxslider*/
+}
+
+.btn_menu
+{
+    display: none;
+}
+
+
+
+#menu ul{
+    list-style: none;
+    display: inline;
+   /* Aixo fa que el ul estigui dintre del div
+    del menu sino al fer float left del li quedaria per sota del div*/
+}
+
+/*Indico li calss .m pperque nomes afecti els li principals*/
+#menu ul > li.m  
+{
+     padding-right: 30px;
+     float: left;
+     padding-bottom: 50px;
+}  
+
+/*Quant el retoli es posa el li sobre el link del menuprincipal li canvia el format */
+#menu li:hover a.menuPrincipal1,
+#menu li:hover a.menuPrincipal2
+{
+    background-color: white;
+    padding: 6px 15px 0px 10px;
+}
+
+
+
+/* daquesta manera faig que els submenus no es vegin*/
+.submenu1, 
+.submenu2
+{
+    display:none;
+    z-index: 1;
+}
+
+/*Aqui faig que el submenu estigui aliniat a sota sel seu menu superior*/
+.submenu1 ul,
+.submenu2 ul
+{padding-left: 0px;}
+
+/*Quant el retoli es posa sobre el li de sobre el submenu fa que apareixi*/
+#menu li:hover .submenu1, 
+#menu li:hover .submenu2
+{ 
+  margin-top: 5px;
+  display:block;
+  position: absolute;
+  padding-top: 0px;
+  border: 1px solid;
+  padding-bottom: 5px;
+  background-color: white;
+ }
+
+/*Aqui li donc forma a la llista del submenu*/
+#menu li:hover .submenu1 ul li, 
+#menu li:hover .submenu2 ul li
+{
+    padding: 10px 10px 0px 20px; /*top right bottom left*/
+    width: 100%;
+    margin-right: 10px;
+    
+}
+
+/*LINKS */
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a img  {border:0;}
+a:hover{color:red;}
+a:link{ }
+a:visited{ }
+a:active { }
+
+@media screen and (max-width:800px)
+{
+    /* Inici- OPCIO 1 de Capçalera*/
+   #capçaLogo
+   {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+   }
+  #capçaLogo .logo
+  {
+      margin-left: 40px;
+      width: 80%;
+      
+  }
+  .texte_cap /*Aixo fa que desaperixi la imatge a menys resolució*/
+  {
+      display: none;
+  }
+   /*Fi - OPCIO 1 de Capçalera*/
+   
+  /* Inici- OPCIO 2 de Capçalera*/
+   .capçalera 
+   {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+    /*Fi- OPCIO 2 de Capçalera*/
+    
+    
+    .btn_menu
+     {
+        display: block;
+     }
+     
+     #menu ul
+     {
+         display: none;
+         position: absolute;
+         margin-top: 10px;
+         margin-left: 0px;
+         background-color: white;
+         padding-left: 10px;
+         padding-top: 5px;
+         padding-bottom: 3px;
+         border: 1px solid;
+         z-index: 1;/*indico que estigui en primer plano per sobre bxslider*/
+     }
+     
+     #menu ul > li.m  
+     {
+       padding-top: 5px;
+       padding-right: 30px;
+       float: none;
+       padding-bottom: 5px;
+      }
+      
+      #menu li:hover a.menuPrincipal1,
+      #menu li:hover a.menuPrincipal2
+      {
+          background-color: white;
+          padding: 6px 2px 2px 5px;
+      }
+
+      
+      /*Esta alerta si a una resolucio treballo amb .submenu i laltre 
+      resolució ho faig amb amb .submenu ul per donar format al mateix */
+      #menu li:hover .submenu1, 
+      #menu li:hover .submenu2
+      {
+          margin-top: 0px;
+          border: 0px;
+          width: 300px; //Aqui l'indico el tamay de la caixa del submenu
+          
+      }
+      
+      
+      #menu li:hover .submenu1 ul , 
+      #menu li:hover .submenu2 ul
+      {
+          margin-left: 75px;
+          margin-top: 0px;
+          padding-left: 2px;
+          padding-bottom: 5px;
+          padding-right: 10px;
+      }
+      
+      /*Aixo ho haig de posar perque em posi tot lo escrit al submenu es vegi corectament*/
+      #menu li:hover .submenu1 ul li , 
+      #menu li:hover .submenu2 ul li
+      {
+        width: 100%;
+        margin-right: 15px;
+      }
+      
+
+}
