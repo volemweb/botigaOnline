@@ -62,7 +62,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            
+            //Comentari de prova
             if ($_SESSION["rol"]==1)  { 
             
                  $botiga=new Botiga($dsn, $user, $password, $_SESSION['iniciada']);
