@@ -209,7 +209,7 @@ a:active { }
       {
           margin-top: 0px;
           border: 0px;
-          width: 300px; //Aqui l'indico el tamay de la caixa del submenu
+          width: 300px; /*Aqui l'indico el tamay de la caixa del submenu*/
           
       }
       
