@@ -42,6 +42,17 @@ class Botiga {
         }
          
     }
+    //He hagut d'afeguir aquesta funció perque em funciones en el panell d'administració
+    //Aixo es anomenat metodos magicos
+    public function __sleep()
+    {
+       return array('_dsn', '_user', '_password');
+    }
+    
+    public function __wakeup()
+    {
+       
+    }
     public function obtenirCompanyies()
     {
         try{
@@ -92,7 +103,7 @@ class Botiga {
     {
        try
         {
-            
+           
              $numFilas= count($this->_Llistat);
              
              return $numFilas;
