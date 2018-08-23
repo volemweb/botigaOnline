@@ -43,20 +43,20 @@ and open the template in the editor.
               //var idCompanyia;
               $("#company").change(
                       function(){
-                          //  idCompanyia = $("#company option:selected ").val();
+                          // idCompanyia = $("#company option:selected ").val();
                           // alert("Ha cambiat");
                            $.ajax({
-						url:"../obtenirLineas.php",
-						type: "POST",
-						data:"idcompany="+$("#company").val(),
+			  			url:"obtenirLineasAdmin.php",
+			 			type: "POST",
+			 			data:"idcompany="+$("#company").val(),
 						success: function(opciones){
 							$("#linea").html(opciones);
 						}
-					})
+					});
+                                    });
                           
                              
                       });
-            });
         
         </script>
     </head>
@@ -65,17 +65,17 @@ and open the template in the editor.
             
             if ($_SESSION["rol"]==1)  { 
             
-                 $botiga=new Botiga($dsn, $user, $password, $_SESSION['iniciada']);
+                 $botigaAdmin=new Botiga($dsn, $user, $password, @$_SESSION['iniciada']);
                  
-                 $_SESSION["botiga"]=$botiga;
+                 $_SESSION["botigaAdmin"]= $botigaAdmin;
                  
-                  if( ! empty($_SESSION["botiga"]))
+                 
+                  if( ! empty($_SESSION["botigaAdmin"]))
                   {
-                      $companyies=$_SESSION["botiga"]->obtenirCompanyies();
+                      $companyies=$_SESSION["botigaAdmin"]->obtenirCompanyies();
                   }
-                
+                  else{ Echo 'Error : no s ha inicialitzat cap objecte classe botiga';}
                  
-            
             ?>
          <nav>
             <?php include 'menuAdmin.php';?>
@@ -89,13 +89,13 @@ and open the template in the editor.
             <div class="titol"> 
                 <h1>LListar productes de la botiga</h1>
             </div>
-            
             <div>
-                <form method="POST" name="frm_companyia" action="veure_productes.php">
+               <form method="POST" name="frm_companyia" action="veure_productes.php">
+                <table>
                   <tr>
                       <td>Companyia:
                           <select id="company" name="companyia">
-                              <option id="opcio" value="0">Totes....</option>
+                              <option id="opcioCompanyia" value="0">Totes....</option>
                         <?php 
                         
                          foreach($companyies as $nomCom)
@@ -106,26 +106,21 @@ and open the template in the editor.
                         ?> 
                         </select>
                       </td>
-                  </tr>
-                  <tr>
+                  
+                
                       <td>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linea:
                    <select id="linea" name="linea">
-                     <option id="opcio" value="0">Totes....</option>
-                     <?php 
-                     
-                     foreach($lineas as $nomLin)
-                     {
-                       echo "<option value='".$nomLin['IdNumber']."'>".$nomLin['Name']."</option>";
-                     }
-                     ?> 
+                   <option id="opcioLinea" value="0">Totes....</option> 
                    </select>
                    </td>
-                   
+               
                     <td> <input id="btnCompanyia" type="submit" value="Veure" name="buscarCom"></td>
                   </tr>
-                </form>
                </table>
+                   
+                   <div id="vador"></div>
+               </form>
             </div>
                   
         
