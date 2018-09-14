@@ -65,7 +65,7 @@ and open the template in the editor.
             
             if ($_SESSION["rol"]==1)  { 
             
-                 $botigaAdmin=new Botiga($dsn, $user, $password, @$_SESSION['iniciada']);
+                 $botigaAdmin=new Botiga($dsn, $user, $password, $_SESSION['iniciada']);
                  
                  $_SESSION["botigaAdmin"]= $botigaAdmin;
                  
