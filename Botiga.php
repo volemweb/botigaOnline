@@ -44,14 +44,18 @@ class Botiga {
     }
     //He hagut d'afeguir aquesta funció perque em funciones en el panell d'administració
     //Aixo es anomenat metodos magicos
+    /*serialize() comprueba si la clase tiene un método con el nombre mágico __sleep(). 
+     * Si es así, el método se ejecuta antes de cualquier serialización. 
+     * Se puede limpiar el objeto y se supone que devuelve un array con los nombres de todas 
+     * las variables de el objeto que se va a serializar. Si el método no devuelve nada, 
+     * entonces NULL es serializado y un error E_NOTICE es emitido.
+        El uso para el que está destinado __sleep() consiste en confirmar datos pendientes o 
+     * realizar tareas similares de limpieza. Además, el método es útil si tiene objetos 
+     * muy grandes que no necesitan guardarse por completo.*/
+    
     public function __sleep()
     {
-       return array('_dsn', '_user', '_password');
-    }
-    
-    public function __wakeup()
-    {
-       
+      return array( '_dsn','_user','_password','_sessio','_Llistat');
     }
     public function obtenirCompanyies()
     {
