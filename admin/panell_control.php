@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="../css/menuprincipal.css">
         <link rel="stylesheet" type="text/css" href="../css/botigaOnline.css">
         <link rel="stylesheet" type="text/css" href="css/menuAdmin.css">
-        <link rel="stylesheet" type="text/css" href="css/Admin.css">
+        <link rel="stylesheet" type="text/css" href="css/admin.css">
         <link rel="shortcut icon" type="image/x-icon" href="../imatges/favicon.ico" />
         
         <!--Aquest meta el fem servir perque detecti els dispositus mobils etc... -->
