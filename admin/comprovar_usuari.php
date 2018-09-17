@@ -40,7 +40,7 @@ if(isset($_POST['usuari']))
         }        
  }
         
-    ?>
+ 
         
       
 
