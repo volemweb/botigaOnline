@@ -23,10 +23,7 @@ if(isset($_POST['usuari']))
           
             
        if($camps['rol']==1)
-       {   
-              echo $camps['rol'];
-          
-                         
+       {             
                $_SESSION['id_admin']=$camps['id'];
                $_SESSION['email_admin']=$camps['email'];
                $_SESSION['usuari_admin']=$camps['usuari'];  
@@ -46,5 +43,4 @@ if(isset($_POST['usuari']))
     ?>
         
       
-     </body>
-</html>
+
