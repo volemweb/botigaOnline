@@ -1,6 +1,7 @@
 <?php
 include '../conexio_bd/dades_conexio.php';
 require_once '../Botiga.php';
+require_once '../paginacio/Paginacio.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -61,10 +62,43 @@ and open the template in the editor.
         </script>
     </head>
     <body>
+        
+         <nav>
+            <?php include 'menuAdmin.php';?>
+         </nav>
         <?php
             
             if ($_SESSION["rol"]==1)  { 
+                
+                
+             $TAMANY_PAGINA=6;
             
+             if(isset($_GET["pag"]))
+             {
+                 $pagina=$_GET["pag"];
+                 
+                 $companyies=$_SESSION["botigaAdmin"]->obtenirCompanyies();
+                 
+                 if($pagina==1)
+                 {
+                     $inici=0;
+                     $final=$TAMANY_PAGINA-1;
+                 }
+                 else 
+                 {
+                 
+                 $num=$pagina-1;
+                 
+                 $inici=($TAMANY_PAGINA*$num);
+                 $final=($TAMANY_PAGINA*$pagina)-1;
+                 }          
+             }
+             else
+             {
+                 $inici=0;
+                 $final=$TAMANY_PAGINA-1;
+                
+                 $pagina =1;
                  $botigaAdmin=new Botiga($dsn, $user, $password, $_SESSION['iniciada']);
                  
                  $_SESSION["botigaAdmin"]= $botigaAdmin;
@@ -75,11 +109,10 @@ and open the template in the editor.
                       $companyies=$_SESSION["botigaAdmin"]->obtenirCompanyies();
                   }
                   else{ Echo 'Error : no s ha inicialitzat cap objecte classe botiga';}
+             }
                  
             ?>
-         <nav>
-            <?php include 'menuAdmin.php';?>
-         </nav>
+        
         
         <br>
         <br> <!--Aquest dos salts de linea els poso per donar espai al menu. -->
@@ -118,15 +151,117 @@ and open the template in the editor.
                     <td> <input id="btnCompanyia" type="submit" value="Veure" name="buscarCom"></td>
                   </tr>
                </table>
-                   
-                   <div id="vador"></div>
                </form>
-            </div>
+                   
+       <div id="llista">
+            <?php
+                       
+           if(@$_POST['buscarCom'])
+            {   
+                $companyia=$_POST["companyia"];
+                $linea=$_POST["linea"];
+            
+                
+                if($companyia==0 && $linea==0)
+                {
+                  $_SESSION['botiga']->llistatProductes($inici,$TAMANY_PAGINA);
+                  
+                  $num_total_files=$_SESSION['botiga']->totalFiles();
+                  $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
+                  
+                  $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
+                  
+                  if($num_total_files>0)
+                  {
+                  $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+            
+                  $paginacio->__toString();
+                  }
+                }
+                else if ($companyia!=0 && $linea==0)
+                {
+                  $_SESSION['botigaAdmin']->llistatProductesCompanyia($companyia);
+                
+                   $num_total_files=$_SESSION['botigaAdmin']->totalFiles();
+                   $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
+                 
+                   $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
+                
+                  if($num_total_files>0)
+                  {
+                     $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+            
+                     $paginacio->__toString();
+                  }
+                }
+                 else if ($companyia!=0 && $linea!=0)
+                {
+                  $_SESSION['botigaAdmin']->llistatProductesCompanyiaLinea($companyia, $linea);
+               
+                  $num_total_files=$_SESSION['botigaAdmin']->totalFiles();
+                  $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
+                  
+                  $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
+                  
+                
+                 if($num_total_files>0)
+                  {
+                  $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+            
+                  $paginacio->__toString();
+                  }
+                
+                 }
+            }
+            else if(isset($_GET["pag"]))
+            {
+                if( ! empty($_SESSION["botigaAdmin"]))
+                {
+                
+                  $num_total_files=$_SESSION['botigaAdmin']->totalFiles();
+                  $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
+                  
+                  $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
+                 
+                  if($num_total_files>0)
+                  {
+                    $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+                    $paginacio->__toString();
+                  }
+                }
+            }
+            else 
+            {
+                  $_SESSION['botigaAdmin']->llistatProductes();
+                  
+                  $num_total_files=$_SESSION['botigaAdmin']->totalFiles();
+                  $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
+                  
+                  $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
+                  
+                  if($num_total_files>0)
+                  {
+                  $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+            
+                  $paginacio->__toString();
+                  }
+            }
+            
+             if( ! empty($_SESSION["botigaAdmin"]))
+                {
+                   $_SESSION['botigaAdmin']->closeCon();
+                }
+            
+            ?>
+                       
+    </div>
+                   
+    </div>
                   
         
-         </aside>
-        <?php
-           }
-        ?>
+     </aside>
+     <?php
+        }
+     ?>
     </body>
 </html>
