@@ -325,6 +325,56 @@ class Botiga {
         }
     }
     
+    public function imprimirLlistatAdmin($inici,$final,$num_total_files)
+    {
+      
+        
+        if($final>$num_total_files)
+        {
+            $final=$num_total_files-1;
+            
+        }
+        else if($final==$num_total_files)
+        {
+            $final=$final-1;
+        }
+        
+        echo "</br>";
+        echo "<div id='totalProductes'>Productes: ".$num_total_files."</div>";
+        
+          $moneda= mb_convert_encoding("€","ISO-8859-15","UTF-8"); //utilitzo aquesta funcio perque es vegi el 
+                                                                     // el simblo de Euro amb ISO-8859-15
+          $desc;
+          $preu;
+          
+        echo "<table>";
+       // echo "<tr><td colspan=3>".self::nomCompayia($this->_Llistat[$i]["CompanyId"])."</td></tr>";  
+        
+        for($i=$inici;$i<=$final;$i++)
+        {  
+            
+            $idNumber=$this->_Llistat[$i]["IdNumber"];
+            
+            echo "<tr><td>&nbsp;</td></tr>";
+            echo "<tr><td colspan=2 style='padding-left:7px;' >".$this->_Llistat[$i]["Name"]."</td>";
+            if($this->_Llistat[$i]["Discount"]>0)
+            {
+                 echo "<td class='descompte'>".$this->_Llistat[$i]["SellPrice"]."€&nbsp&nbsp".$this->_Llistat[$i]["Discount"]."% Descompte&nbsp&nbsp</td>";
+                 $desc=($this->_Llistat[$i]["SellPrice"]*$this->_Llistat[$i]["Discount"])/100;
+                 $preu=number_format($this->_Llistat[$i]["SellPrice"]-$desc,2);
+            }
+            else
+            {
+               $preu=number_format($this->_Llistat[$i]["SellPrice"],2);
+            }
+            echo "<td>Preu :<spam> ".$preu."€</spam></td><td class='enStock'>En Stock : <spam>".$this->_Llistat[$i]["Current"]."</spam></td>";
+            echo "<td class='desc' colspan=3>".$this->_Llistat[$i]["Description"]."</td></tr>"; 
+        }
+        echo "</table>";
+
+
+    }
+    
     public function closeCon()
     {
         $this->_conn=null;
