@@ -211,7 +211,7 @@ class Botiga {
             
             $stmt->execute();
            
-           $this->_Llistat=$stmt->fetchAll();
+            $this->_Llistat=$stmt->fetchAll();
             
         } catch (PDOException $ex) {
             echo 'Problema de Consulta: ' . $ex->getMessage();
@@ -347,15 +347,14 @@ class Botiga {
           $desc;
           $preu;
           
-        echo "<table>";
-       // echo "<tr><td colspan=3>".self::nomCompayia($this->_Llistat[$i]["CompanyId"])."</td></tr>";  
+        echo "<table class='llistat'>";
+         echo "<tr class='cabezera'><td colspan=2 style='padding-left:7px;' >Producto</td>";
+         echo "<td>Precio</td><td>Stock</td></tr>";
         
         for($i=$inici;$i<=$final;$i++)
         {  
             
             $idNumber=$this->_Llistat[$i]["IdNumber"];
-            
-            echo "<tr><td>&nbsp;</td></tr>";
             echo "<tr><td colspan=2 style='padding-left:7px;' >".$this->_Llistat[$i]["Name"]."</td>";
             if($this->_Llistat[$i]["Discount"]>0)
             {
@@ -367,8 +366,7 @@ class Botiga {
             {
                $preu=number_format($this->_Llistat[$i]["SellPrice"],2);
             }
-            echo "<td>Preu :<spam> ".$preu."€</spam></td><td class='enStock'>En Stock : <spam>".$this->_Llistat[$i]["Current"]."</spam></td>";
-            echo "<td class='desc' colspan=3>".$this->_Llistat[$i]["Description"]."</td></tr>"; 
+            echo "<td><spam> ".$preu."€</spam></td><td> <spam>".$this->_Llistat[$i]["Current"]."</spam></td>";
         }
         echo "</table>";
 
