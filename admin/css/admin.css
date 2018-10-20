@@ -23,7 +23,7 @@
 
 #contingutPagina
 {
-   width:80%;
+   width:60%;
    margin-left: auto;
    margin-right: auto;
 
@@ -32,4 +32,16 @@
 #contingutPagina .titol
 {
     text-align: center;  
+}
+
+/*Pagina veure productes */
+
+.llistat td
+{
+    width: 80%;
+    border:1px solid;  
+}
+.llistat .cabezera
+{
+    font-weight: bolder;  
 }
