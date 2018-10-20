@@ -69,9 +69,8 @@ and open the template in the editor.
         <?php
             
             if ($_SESSION["rol"]==1)  { 
-                
-                
-             $TAMANY_PAGINA=6;
+                               
+             $TAMANY_PAGINA=10;
             
              if(isset($_GET["pag"]))
              {
@@ -122,6 +121,7 @@ and open the template in the editor.
             <div class="titol"> 
                 <h1>LListar productes de la botiga</h1>
             </div>
+            
             <div>
                <form method="POST" name="frm_companyia" action="veure_productes.php">
                 <table>
@@ -153,7 +153,6 @@ and open the template in the editor.
                </table>
                </form>
                    
-       <div id="llista">
             <?php
                        
            if(@$_POST['buscarCom'])
@@ -164,9 +163,9 @@ and open the template in the editor.
                 
                 if($companyia==0 && $linea==0)
                 {
-                  $_SESSION['botiga']->llistatProductes($inici,$TAMANY_PAGINA);
+                  $_SESSION['botigaAdmin']->llistatProductes($inici,$TAMANY_PAGINA);
                   
-                  $num_total_files=$_SESSION['botiga']->totalFiles();
+                  $num_total_files=$_SESSION['botigaAdmin']->totalFiles();
                   $total_paginas=ceil($num_total_files/$TAMANY_PAGINA);
                   
                   $_SESSION['botigaAdmin']->imprimirLlistatAdmin($inici,$final,$num_total_files);
@@ -206,9 +205,9 @@ and open the template in the editor.
                 
                  if($num_total_files>0)
                   {
-                  $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
+                    $paginacio = new Paginacio($total_paginas,$pagina,"veure_productes.php");
             
-                  $paginacio->__toString();
+                    $paginacio->__toString();
                   }
                 
                  }
@@ -253,9 +252,7 @@ and open the template in the editor.
                 }
             
             ?>
-                       
-    </div>
-                   
+                                      
     </div>
                   
         
